@@ -87,7 +87,7 @@ INFO: 1 process: 1 action cache hit, 1 internal.
 INFO: Build completed successfully, 1 total action
 
 $ cat bazel-bin/hello_genrule.out
-Hello world
+Hello world!
 ```
 
 Now question: is `run_binary()` supposed to invoke the `py_binary()` with
