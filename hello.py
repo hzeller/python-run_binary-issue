@@ -1,3 +1,6 @@
 #!/usr/bin/env python3
 
-print("Hello world")
+import sys
+
+with open(sys.argv[1], "w") as f:
+    f.write("hello world")
