@@ -36,6 +36,13 @@ module(
 
 bazel_dep(name = "bazel_skylib", version = "1.9.0")
 bazel_dep(name = "rules_python", version = "1.8.3")
+
+# Registering toolchain to leave no doubt
+python = use_extension("@rules_python//python/extensions:python.bzl", "python")
+python.toolchain(
+    python_version = "3.11",
+    is_default = True,
+)
 ```
 
 If this is on a pure system (nothing but bazel on the system), the `genrule()`
